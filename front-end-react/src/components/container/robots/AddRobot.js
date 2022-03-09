@@ -29,8 +29,6 @@ const AddRobot = () => {
           <Button variant="contained" size="large" color="warning" sx={{ width: '20%', marginLeft: '20px' }}>CLEAR</Button>
         </div>
       </div>
-
-
     </Box>
   );
 };
