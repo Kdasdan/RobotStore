@@ -4,30 +4,21 @@ import { IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { useNavigate } from 'react-router';
+import { useEffect, useState } from 'react';
 import React from 'react';
+import axios from 'axios';
 
-const Robot = (params) => {
+const Robot = (props) => {
 
-  const id = params.id
+  const { id } = props;
+  const { name } = props;
+  const { price } = props;
 
   const navigate = useNavigate();
 
-  return (
-
-    <>
-
-      <div style={{
-        position: 'relative',
-        padding: '10px',
-        display: 'flex',
-        justifyContent: 'space-around',
-        borderBottom: '3px solid lightgray'
-      }}>
-
-        <p>1</p>
-        <p>Robot</p>
-        <p>15000€</p>
-
+  const ButtonEditAndDelete = () => {
+    if (sessionStorage["level"] == 1) {
+      return (
         <div style={{
           display: 'flex',
           position: 'absolute',
@@ -41,6 +32,34 @@ const Robot = (params) => {
             <DeleteIcon />
           </IconButton>
         </div>
+      );
+    }
+    return <></>;
+  }
+
+  return (
+
+    <>
+
+      <div style={{
+        position: 'relative',
+        padding: '10px',
+        display: 'flex',
+        justifyContent: 'space-around',
+        borderBottom: '3px solid lightgray'
+      }}>
+
+        <div style={{ flex: 1 }}>
+          <p style={{ textAlign: 'center' }}>{id}</p>
+        </div>
+        <div style={{ flex: 1 }}>
+          <p style={{ textAlign: 'center' }}>{name}</p>
+        </div>
+        <div style={{ flex: 1 }}>
+          <p style={{ textAlign: 'center' }}>{price}</p>
+        </div>
+
+        <ButtonEditAndDelete />
 
       </div>
     </>

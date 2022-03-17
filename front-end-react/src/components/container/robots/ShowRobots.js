@@ -1,16 +1,20 @@
 import { Box } from '@mui/material';
 import React from 'react';
 import Robot from './Robot';
-
-
-
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const ShowRobots = () => {
+  const [data, setData] = useState([]);
 
-  let items = [];
-  for (let index = 0; index < 50; index++) {
-    items.push(<Robot />)
-  }
+  useEffect(() => {
+    axios.get("https://jsonplaceholder.typicode.com/users")
+      .then((res) => {
+        for (let index = 0; index < res.data.length; index++) {
+          setData(data => [...data, <Robot id={res.data[index]["id"]} name={res.data[index]["username"]} price={res.data[index]["id"]} />]);
+        }
+      });
+  }, []);
 
   return (
     <Box
@@ -44,13 +48,19 @@ const ShowRobots = () => {
             display: 'flex',
             justifyContent: 'space-around',
           }}>
-            <h3>ID</h3>
-            <h3>NAME</h3>
-            <h3>PRICE</h3>
+            <div style={{ flex: 1 }}>
+              <h3 style={{ textAlign: 'center' }}>ID</h3>
+            </div>
+            <div style={{ flex: 1 }}>
+              <h3 style={{ textAlign: 'center' }}>NAME</h3>
+            </div>
+            <div style={{ flex: 1 }}>
+              <h3 style={{ textAlign: 'center' }}>PRICE</h3>
+            </div>
           </div>
         </Box>
-        {/* ICI  ROBOT */}
-        {items}
+        {/* HERE ROBOT */}
+        {data}
       </Box>
     </Box>
   );

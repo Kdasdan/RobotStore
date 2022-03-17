@@ -4,6 +4,7 @@ import EditRobot from './components/container/robots/EditRobot';
 import ShowRobots from './components/container/robots/ShowRobots';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/add-robot" element={<AddRobot />} />
         <Route path="/edit-robot/:id" element={<EditRobot />} />
       </Route>
+      <Route path="/login" element={<Login />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

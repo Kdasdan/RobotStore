@@ -1,13 +1,11 @@
 import React from 'react';
 import {
   Box,
-  TextField,
   Input,
   Button
 } from '@mui/material';
 
 const Clear = () => {
-  document.getElementById("RobotId").value = "";
   document.getElementById("RobotName").value = "";
   document.getElementById("RobotPrice").value = "";
 }
@@ -29,7 +27,6 @@ const AddRobot = () => {
       }}>
         <h1>ADD A NEW ROBOT</h1>
 
-        <Input placeholder="ID" id="RobotId" />
         <Input placeholder="Name" id="RobotName" />
         <Input placeholder="Price" id="RobotPrice" />
 
