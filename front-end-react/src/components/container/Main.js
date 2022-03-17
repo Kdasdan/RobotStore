@@ -1,8 +1,8 @@
-import { Box } from '@mui/material';
+import React from 'react';
 import ButtonChoise from './ButtonChoise';
 import Container from './robots/Container';
-import React from 'react';
-import { Outlet } from 'react-router-dom';
+
+import { Box } from '@mui/material';
 
 const Main = () => {
   return (

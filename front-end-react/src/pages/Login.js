@@ -60,10 +60,11 @@ const Login = () => {
           flexDirection: 'column',
           justifyContent: 'space-around',
         }}>
-          <h1 style={{ textAlign: 'center' }}>LOGIN</h1>
+          <h1 style={{ textAlign: 'center' }}>Robot Store</h1>
 
           <Input placeholder="Username" id="Username" />
-          <Input placeholder="Password" id="Password" />
+          <Input placeholder="Password" id="Password" type='password' />
+
 
           <div style={{ color: 'red', visibility: visibility }} id="LoginError">
             <p>Username or password is incorrect</p>

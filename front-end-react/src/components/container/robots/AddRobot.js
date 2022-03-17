@@ -28,7 +28,7 @@ const AddRobot = () => {
         <h1>ADD A NEW ROBOT</h1>
 
         <Input placeholder="Name" id="RobotName" />
-        <Input placeholder="Price" id="RobotPrice" />
+        <Input placeholder="Price" id="RobotPrice" type="number" />
 
         <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
           <Button variant="contained" size="large" sx={{ width: '20%' }}>ADD</Button>

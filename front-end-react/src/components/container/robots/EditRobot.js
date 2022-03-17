@@ -1,15 +1,13 @@
-import { Box } from '@mui/system';
-import { useParams } from 'react-router-dom';
-import { Button, Input } from '@mui/material';
-import { useNavigate } from 'react-router';
-
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
+
+import { Box, Button, Input } from '@mui/material';
 
 const EditRobot = () => {
 
   const navigate = useNavigate();
-
 
   const params = useParams();
   console.log(params);
