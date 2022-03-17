@@ -8,7 +8,7 @@ import Robot from './Robot';
 const ShowRobots = () => {
 
   let items = [];
-  for (let index = 0; index < 10; index++) {
+  for (let index = 0; index < 50; index++) {
     items.push(<Robot />)
   }
 

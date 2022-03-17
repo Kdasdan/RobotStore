@@ -1,7 +1,16 @@
-import { Box } from '@mui/material';
-import { TextField } from '@mui/material';
-import { Button } from '@mui/material';
 import React from 'react';
+import {
+  Box,
+  TextField,
+  Input,
+  Button
+} from '@mui/material';
+
+const Clear = () => {
+  document.getElementById("RobotId").value = "";
+  document.getElementById("RobotName").value = "";
+  document.getElementById("RobotPrice").value = "";
+}
 
 const AddRobot = () => {
   return (
@@ -20,13 +29,13 @@ const AddRobot = () => {
       }}>
         <h1>ADD A NEW ROBOT</h1>
 
-        <TextField id="outlined-basic" label="ID" variant="outlined" size='large' />
-        <TextField id="outlined-basic" label="Name" variant="outlined" size='large' />
-        <TextField id="outlined-basic" label="Price" variant="outlined" size='large' />
+        <Input placeholder="ID" id="RobotId" />
+        <Input placeholder="Name" id="RobotName" />
+        <Input placeholder="Price" id="RobotPrice" />
 
         <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
           <Button variant="contained" size="large" sx={{ width: '20%' }}>ADD</Button>
-          <Button variant="contained" size="large" color="warning" sx={{ width: '20%', marginLeft: '20px' }}>CLEAR</Button>
+          <Button onClick={Clear} variant="contained" size="large" color="warning" sx={{ width: '20%', marginLeft: '20px' }}>CLEAR</Button>
         </div>
       </div>
     </Box>

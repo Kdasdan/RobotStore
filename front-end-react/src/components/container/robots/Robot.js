@@ -3,14 +3,21 @@ import { Button } from '@mui/material';
 import { IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import { useNavigate } from 'react-router';
 import React from 'react';
 
-const Robot = () => {
+const Robot = (params) => {
+
+  const id = params.id
+
+  const navigate = useNavigate();
+
   return (
 
     <>
 
       <div style={{
+        position: 'relative',
         padding: '10px',
         display: 'flex',
         justifyContent: 'space-around',
@@ -25,11 +32,10 @@ const Robot = () => {
           display: 'flex',
           position: 'absolute',
           right: '10px',
-          margin: '0px',
-          padding: '0px',
+          top: '0px'
         }}>
           <IconButton aria-label="delete" color='primary'>
-            <EditIcon />
+            <EditIcon onClick={() => { navigate(`/edit-robot/${id}`) }} />
           </IconButton>
           <IconButton aria-label="delete" color='error'>
             <DeleteIcon />
