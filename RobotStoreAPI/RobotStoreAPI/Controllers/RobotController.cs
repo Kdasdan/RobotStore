@@ -36,5 +36,20 @@ namespace RobotStoreAPI.Controllers
 
             return Ok(await _context.Robots.ToListAsync());
         }
+
+        [HttpPut]
+        public async Task<ActionResult<Robot>> UpdateRobot(Robot request)
+        {
+            var dbRobot = await _context.Robots.FindAsync(request.Id);
+            if (dbRobot == null)
+                return BadRequest("Robot not found.");
+
+            dbRobot.Name = request.Name;
+            dbRobot.Price = request.Price;
+
+            await _context.SaveChangesAsync();
+
+            return Ok(await _context.Robots.ToListAsync());
+        }
     }
 }
