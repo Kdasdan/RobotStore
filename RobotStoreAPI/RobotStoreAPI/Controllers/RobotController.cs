@@ -27,5 +27,14 @@ namespace RobotStoreAPI.Controllers
                 return BadRequest("Robot not found.");
             return Ok(robot);
         }
+
+        [HttpPost]
+        public async Task<ActionResult<Robot>> AddRobot(Robot robot)
+        {
+            _context.Robots.Add(robot);
+            await _context.SaveChangesAsync();
+
+            return Ok(await _context.Robots.ToListAsync());
+        }
     }
 }
