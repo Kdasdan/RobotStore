@@ -6,19 +6,26 @@ namespace RobotStoreAPI.Controllers
     [ApiController]
     public class RobotController : ControllerBase
     {
+        private readonly DataContext _context;
+
+        public RobotController(DataContext context)
+        {
+            _context = context;
+        }
+
         [HttpGet]
         public async Task<ActionResult<List<Robot>>> Get()
         {
-            var robots = new List<Robot>
-            {
-                new Robot {
-                    Id = 1,
-                    Name = "Robot",
-                    Price = 500
-                }
-            };
+            return Ok(await _context.Robots.ToListAsync());
+        }
 
-            return Ok(robots);
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Robot>> Get(int id)
+        {
+            var robot = await _context.Robots.FindAsync(id);
+            if (robot == null)
+                return BadRequest("Robot not found.");
+            return Ok(robot);
         }
     }
 }
