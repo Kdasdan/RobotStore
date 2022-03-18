@@ -51,5 +51,18 @@ namespace RobotStoreAPI.Controllers
 
             return Ok(await _context.Robots.ToListAsync());
         }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<List<Robot>>> DeleteRobot(int id)
+        {
+            var robot = await _context.Robots.FindAsync(id);
+            if (robot == null)
+                return BadRequest("Robot not found.");
+
+            _context.Robots.Remove(robot);
+            await _context.SaveChangesAsync();
+
+            return Ok(await _context.Robots.ToListAsync());
+        }
     }
 }
