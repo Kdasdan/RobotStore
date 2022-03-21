@@ -12,7 +12,7 @@ const Login = () => {
   const [visibility, setVisibility] = useState("hidden");
 
   const Login = () => {
-    axios.get("http://localhost:3030/account")
+    axios.get("https://localhost:7063/api/Account")
       .then((res) => {
         for (let index = 0; index < res.data.length; index++) {
           if (

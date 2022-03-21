@@ -9,13 +9,27 @@ const SearchRobot = () => {
 
   const [data, setData] = useState([]);
 
-  const SearchRobot = (value) => {
-    // axios.get(`https://jsonplaceholder.typicode.com/users`)
-    //   .then((res) => {
-    //     for (let index = 0; index < res.data.length; index++) {
-    //       setData(data => [...data, <Robot id={res.data[index]["id"]} name={res.data[index]["username"]} price={res.data[index]["id"]} />]);
-    //     }
-    //   });
+  const SearchRobot = () => {
+    let searchBar = document.getElementById("SearchRobot").value.toLowerCase();
+    let i = 0;
+    setData([]);
+
+
+    if (searchBar != "") {
+
+      axios.get(`https://localhost:7063/api/Robot`)
+        .then((res) => {
+
+          res.data.map(x => {
+            if (x.name.indexOf(searchBar) == 0) {
+              // console.log(x.name);
+              setData(data => [...data, <Robot key={i} id={x.id} name={x.name} price={x.price} />]);
+              i++
+            }
+
+          });
+        });
+    }
   }
 
   return (
@@ -41,7 +55,7 @@ const SearchRobot = () => {
           display: 'flex',
           justifyContent: 'center'
         }}>
-          <Input placeholder="Search robot..." id="SearchRobot" sx={{ margin: '10px', width: '300px' }} onChange={(event) => { SearchRobot(event.target.value) }} />
+          <Input placeholder="Search robot..." id="SearchRobot" sx={{ margin: '10px', width: '300px' }} onChange={(event) => { SearchRobot(event.target.value); }} />
         </div>
         <Box
           sx={{
@@ -69,7 +83,7 @@ const SearchRobot = () => {
             </div>
           </div>
         </Box>
-        {/* {data} */}
+        {data}
       </Box>
     </Box>
   );

@@ -14,13 +14,13 @@ namespace RobotStoreAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Robot>>> Get()
+        public async Task<ActionResult<List<Robot>>> GetRobots()
         {
             return Ok(await _context.Robots.ToListAsync());
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Robot>> Get(int id)
+        public async Task<ActionResult<Robot>> GetRobot(int id)
         {
             var robot = await _context.Robots.FindAsync(id);
             if (robot == null)
@@ -37,7 +37,7 @@ namespace RobotStoreAPI.Controllers
             return Ok(await _context.Robots.ToListAsync());
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<ActionResult<Robot>> UpdateRobot(Robot request)
         {
             var dbRobot = await _context.Robots.FindAsync(request.Id);

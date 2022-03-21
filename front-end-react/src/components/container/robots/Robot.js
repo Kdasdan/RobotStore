@@ -13,6 +13,15 @@ const Robot = (props) => {
 
   const navigate = useNavigate();
 
+  async function DeleteRobot() {
+    try {
+      await fetch(`https://localhost:7063/api/Robot/${id}`, { method: 'DELETE' });
+      window.location.reload();
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
   const ButtonEditAndDelete = () => {
     if (sessionStorage["level"] == 1) {
       return (
@@ -22,10 +31,10 @@ const Robot = (props) => {
           right: '10px',
           top: '0px'
         }}>
-          <IconButton aria-label="delete" color='primary'>
-            <EditIcon onClick={() => { navigate(`/edit-robot/${id}`) }} />
+          <IconButton aria-label="delete" color='primary' onClick={() => { navigate(`/edit-robot/${id}`) }}>
+            <EditIcon />
           </IconButton>
-          <IconButton aria-label="delete" color='error'>
+          <IconButton aria-label="delete" color='error' onClick={DeleteRobot} >
             <DeleteIcon />
           </IconButton>
         </div>

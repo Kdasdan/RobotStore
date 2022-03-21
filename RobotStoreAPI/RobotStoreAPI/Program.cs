@@ -20,8 +20,17 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseCors(corsSettings => corsSettings
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+
     app.UseSwagger();
     app.UseSwaggerUI();
+}
+else
+{
+    app.UseCors(corsSettings => corsSettings.WithOrigins("http://localhost:3000"));
 }
 
 app.UseHttpsRedirection();

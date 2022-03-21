@@ -8,10 +8,10 @@ const ShowRobots = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get("https://jsonplaceholder.typicode.com/users")
+    axios.get("https://localhost:7063/api/Robot")
       .then((res) => {
         for (let index = 0; index < res.data.length; index++) {
-          setData(data => [...data, <Robot id={res.data[index]["id"]} name={res.data[index]["username"]} price={res.data[index]["id"]} />]);
+          setData(data => [...data, <Robot key={index} id={res.data[index]["id"]} name={res.data[index]["name"]} price={res.data[index]["price"]} />]);
         }
       });
   }, []);
