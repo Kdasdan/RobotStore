@@ -1,0 +1,58 @@
+// SMALL
+@media screen and (max-width: 600px) {
+  // Home
+  #accountTitle {
+    font-size: 15px;
+  }
+  #btnLogout {
+    font-size: 10px !important;
+  }
+
+  // Header
+  #titleHeader{
+    font-size: 30px;
+  }
+  #sloganHeader{
+    font-size: 20px;
+  }
+
+  // Login
+  #loginTitle {
+    font-size: 24px;
+  }
+
+  // AddRobot
+  #addRobotTitle {
+    font-size: 25px;
+  }
+
+  // Robot
+  #editBtn {
+    width: 20px;
+  }
+  #deleteBtn {
+    width: 20px;
+  }
+
+  // ButtonChoise
+  .btnChoise {
+    font-size: 12px !important;
+    // width: 20px !important;
+  }
+}
+
+// MEDIUM
+@media screen and (max-width: 900px) {
+  // Home
+  #accountTitle {
+    font-size: 20px;
+  }
+
+  // Header
+  #titleHeader{
+    font-size: 30px;
+  }
+  #sloganHeader{
+    font-size: 20px;
+  }
+}

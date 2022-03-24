@@ -8,7 +8,7 @@ const ShowRobots = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get("https://localhost:7063/api/Robot")
+    axios.get("https://robotstore.azurewebsites.net/api/Robot")
       .then((res) => {
         for (let index = 0; index < res.data.length; index++) {
           setData(data => [...data, <Robot key={index} id={res.data[index]["id"]} name={res.data[index]["name"]} price={res.data[index]["price"]} />]);

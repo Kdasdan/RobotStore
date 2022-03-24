@@ -39,8 +39,8 @@ const Home = () => {
         top: '5px',
         left: '5px'
       }}>
-        <h2>{`Account: ${sessionStorage["username"]}`}</h2>
-        <Button onClick={Logout} color="error" variant="contained" size="medium" sx={{ width: '50%', margin: '5px' }}>LOGOUT</Button>
+        <h2 id="accountTitle">{`Account: ${sessionStorage["username"]}`}</h2>
+        <Button id="btnLogout" onClick={Logout} color="error" variant="contained" size="medium" sx={{ width: '50%', margin: '5px' }}>LOGOUT</Button>
       </div>
       <Main />
     </Box>

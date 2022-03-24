@@ -14,12 +14,12 @@ const Clear = () => {
 }
 
 async function PostNewRobot() {
-
   try {
-    await fetch('https://localhost:7063/api/Robot', {
+    await fetch('https://robotstore.azurewebsites.net/api/Robot', {
       method: 'POST',
       mode: 'cors',
       headers: {
+        'Access-Control-Allow-Origin': '*',
         'Content-type': 'application/json',
       },
       body: JSON.stringify({
@@ -70,7 +70,7 @@ const AddRobot = () => {
         flexDirection: 'column',
         justifyContent: 'space-around',
       }}>
-        <h1>ADD A NEW ROBOT</h1>
+        <h1 id="addRobotTitle">ADD A NEW ROBOT</h1>
 
         <Input placeholder="Name" id="RobotName" required onChange={VerifyInputOne} />
         <Input placeholder="Price" id="RobotPrice" type="number" required onChange={VerifyInputTwo} />
@@ -79,8 +79,8 @@ const AddRobot = () => {
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-          <Button disabled={verifyName || verifyPrice} onClick={() => { PostNewRobot(); navigate("/"); }} variant="contained" size="large" sx={{ width: '20%' }}>ADD</Button>
-          <Button onClick={Clear} variant="contained" size="large" color="warning" sx={{ width: '20%', marginLeft: '20px' }}>CLEAR</Button>
+          <Button disabled={verifyName || verifyPrice} onClick={() => { PostNewRobot(); navigate("/"); }} variant="contained" size="large" sx={{ width: '20%' }} className="btnChoise">ADD</Button>
+          <Button onClick={Clear} variant="contained" size="large" color="warning" sx={{ width: '20%', marginLeft: '20px' }} className="btnChoise">CLEAR</Button>
         </div>
       </div>
     </Box>

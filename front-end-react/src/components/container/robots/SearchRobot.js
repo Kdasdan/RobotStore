@@ -12,14 +12,13 @@ const SearchRobot = () => {
   const SearchRobot = () => {
     let searchBar = document.getElementById("SearchRobot").value.toLowerCase();
     let i = 0;
-    setData([]);
-
 
     if (searchBar != "") {
 
-      axios.get(`https://localhost:7063/api/Robot`)
+      axios.get(`https://robotstore.azurewebsites.net/api/Robot`)
         .then((res) => {
 
+          setData([]);
           res.data.map(x => {
             if (x.name.indexOf(searchBar) == 0) {
               // console.log(x.name);

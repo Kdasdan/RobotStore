@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArY6SbcmJUkOPhMEotelKBQAAAAACAAAAAAAQZgAAAAEAACAAAADU2KT/nzguTtFm/ydNyx9bwZBbEqrz+Ku8fPa29fu/MAAAAAAOgAAAAAIAACAAAADyA3g+nK0CXYiAvXoAFrzgN/drIvcB2FR976R6diy+gIAAAAD1sfdtj6OnK2j0lIP4bIoWXKnUXGg0pB3zr9KfargXi4ZhBkt9K6ZUpN0V7ndTX/3r2ffZg4JTaZCgASs4Zso0j4jFIwPpbLVMifbRaP8lFacMjRrFSfAfqkuoOzIKNHTvvpn+4yIOxAksgO5jnArZFx9ST5F+Z449WmQHZfR+KkAAAAAkb+ETJ6cspiQ7q590RjGGaTuDkyfPQQ6Eel2I+zB3hDVz139zfwDyW1+fpTp31bwL6O/VRR7Rg4W0teIlx9LP</EncryptedPassword>
+    <History>True|2022-03-23T22:04:47.8388111Z;True|2022-03-23T23:02:02.6867156+01:00;True|2022-03-23T22:36:58.4839976+01:00;True|2022-03-23T22:31:27.6982197+01:00;True|2022-03-23T22:22:30.2315574+01:00;True|2022-03-23T02:39:45.1733621+01:00;True|2022-03-23T02:23:27.0572401+01:00;True|2022-03-23T02:19:03.0467655+01:00;True|2022-03-23T02:17:06.1203839+01:00;True|2022-03-23T01:53:30.5896767+01:00;True|2022-03-23T01:44:00.8193643+01:00;True|2022-03-23T00:41:19.9664934+01:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:robotstoredbserver.database.windows.net,1433%3bInitial Catalog=robotstoredb%3bUser Id=kazimadmin%40robotstoredbserver%3bPassword=Azerty123456</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="RobotStoreAPI.Data.DataContext">
+      <Value>Data Source=tcp:robotstoredbserver.database.windows.net,1433%3bInitial Catalog=robotstoredb%3bUser Id=kazimadmin%40robotstoredbserver%3bPassword=Azerty123456</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

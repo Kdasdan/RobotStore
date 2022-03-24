@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ac/WwiU1xhku0vlTEaJativk52VFBeGbUTngdE/g/yM2oZVrIF03NPkB9RqW1Nijv7W2h8pFGs3CuHUO5tQlyQ==",
+  "dgSpecHash": "0WyZnHyYzf2GRMehatre/8xbQZ2pa0WU3i6l0h1MZFvQ9WZVCC60NR7xSXuxyv+BcQRbyWdOVPg0Tv1Gk3Jccg==",
   "success": true,
   "projectFilePath": "C:\\Users\\kazim\\Desktop\\RobotStore\\RobotStoreAPI\\RobotStoreAPI\\RobotStoreAPI.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\kazim\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.3\\microsoft.entityframeworkcore.design.6.0.3.nupkg.sha512",
     "C:\\Users\\kazim\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.3\\microsoft.entityframeworkcore.relational.6.0.3.nupkg.sha512",
     "C:\\Users\\kazim\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.3\\microsoft.entityframeworkcore.sqlserver.6.0.3.nupkg.sha512",
+    "C:\\Users\\kazim\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.0\\microsoft.entityframeworkcore.tools.6.0.0.nupkg.sha512",
     "C:\\Users\\kazim\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\kazim\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\kazim\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",

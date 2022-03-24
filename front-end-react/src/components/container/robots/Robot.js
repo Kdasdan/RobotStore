@@ -15,7 +15,7 @@ const Robot = (props) => {
 
   async function DeleteRobot() {
     try {
-      await fetch(`https://localhost:7063/api/Robot/${id}`, { method: 'DELETE' });
+      await fetch(`https://robotstore.azurewebsites.net/api/Robot/${id}`, { method: 'DELETE' });
       window.location.reload();
     } catch (e) {
       console.log(e);
@@ -31,10 +31,10 @@ const Robot = (props) => {
           right: '10px',
           top: '0px'
         }}>
-          <IconButton aria-label="delete" color='primary' onClick={() => { navigate(`/edit-robot/${id}`) }}>
+          <IconButton id="editBtn" aria-label="delete" color='primary' onClick={() => { navigate(`/edit-robot/${id}`) }}>
             <EditIcon />
           </IconButton>
-          <IconButton aria-label="delete" color='error' onClick={DeleteRobot} >
+          <IconButton id='deleteBtn' aria-label="delete" color='error' onClick={DeleteRobot} >
             <DeleteIcon />
           </IconButton>
         </div>

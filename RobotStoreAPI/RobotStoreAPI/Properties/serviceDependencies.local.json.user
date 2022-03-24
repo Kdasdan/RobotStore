@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2022-03-22T23:37:00.0590805Z"
+    },
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2022-03-22T23:36:47.9118631Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "9a2fdfbd-e11b-4071-890d-679e5fffd96a"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "RobotStore"
+    }
+  }
+}

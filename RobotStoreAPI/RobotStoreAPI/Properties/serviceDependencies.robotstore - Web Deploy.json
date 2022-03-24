@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/robotstoredbserver/databases/robotstoredb",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:DefaultConnection"
+    },
+    "apis1": {
+      "apiEndpoint": "https://apimrobotstore.azure-api.net/echo",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/apimRobotStore/apis/echo-api",
+      "type": "apis.azure"
+    }
+  }
+}

@@ -2,8 +2,8 @@
 
 namespace RobotStoreAPI.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class AccountController : ControllerBase
     {
         private readonly DataContext _context;

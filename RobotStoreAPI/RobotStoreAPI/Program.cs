@@ -18,20 +18,28 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseCors(corsSettings => corsSettings
+
+app.UseCors(corsSettings => corsSettings
     .AllowAnyOrigin()
     .AllowAnyMethod()
     .AllowAnyHeader());
 
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-else
-{
-    app.UseCors(corsSettings => corsSettings.WithOrigins("http://localhost:3000"));
-}
+app.UseSwagger();
+app.UseSwaggerUI();
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseCors(corsSettings => corsSettings
+//    .AllowAnyOrigin()
+//    .AllowAnyMethod()
+//    .AllowAnyHeader());
+
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
+//else
+//{
+//    app.UseCors(corsSettings => corsSettings.WithOrigins("https://robotstore-e4e0b.web.app"));
+//}
 
 app.UseHttpsRedirection();
 
